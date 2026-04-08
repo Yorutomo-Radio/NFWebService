@@ -13,3 +13,7 @@ backend/Yorutomo/bin/
 
 # Docker
 .devcontainer/
+
+# Assets
+frontend/main/assets/images/icons
+frontend/main/assets/images/program
