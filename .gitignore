@@ -17,3 +17,5 @@ backend/Yorutomo/bin/
 # Assets
 frontend/main/assets/images/icons
 frontend/main/assets/images/program
+
+.archive_*
