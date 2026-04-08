@@ -1,0 +1,142 @@
+.introduction-text {
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 20px;
+    background: rgba(78, 78, 78, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 40px;
+    text-align: center;
+
+}
+
+.introduction-text span {
+    font-size: 1.25rem;
+}
+
+#host-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+@media (min-width: 1400px) {
+    #host-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 1000px) {
+    #host-list {
+        grid-template-columns: repeat(1, 1fr);
+        justify-content: center;
+    }
+}
+
+.host-profile {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 40px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    max-width: 100%;
+    margin: 0;
+}
+
+@media (max-width: 400px) {
+    .host-profile {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .sns a {
+        justify-content: center;
+    }
+}
+
+.host-profile img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #B0B0C0;
+    flex-shrink: 0;
+}
+
+.host-profile h3 {
+    white-space: nowrap;
+    margin: 0 0 5px 0;
+    color: #FFFFFF;
+    font-size: 2rem;
+    text-shadow: 0 0 7px rgba(255, 255, 255, 0.8);
+}
+
+.host-profile p {
+    margin: 0;
+    font-size: 1rem;
+    color: #B0B0C0;
+}
+
+.sns {
+    margin-top: 10px;
+}
+
+.sns a {
+    display: flex;
+    text-decoration: none;
+
+}
+
+.sns p {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.sns div {
+    width: 3px;
+    height: auto;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 25%;
+    background: #666666;
+}
+
+.sns p:hover {
+    color: #FFFFFF;
+    transform: translateY(-2px);
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+}
+
+.twitter-icon {
+    width: 25px;
+    height: auto;
+    fill: #FFFFFF;
+    vertical-align: middle;
+}
+
+.contact-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+}
+
+.Twitter img {
+    width: 60px;
+    height: auto;
+    fill: #FFFFFF;
+}
+
+.Youtube img {
+    width: 60px;
+    height: auto;
+}
+
+.Discord img {
+    width: 60px;
+    height: auto;
+}

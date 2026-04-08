@@ -1,0 +1,157 @@
+<html lang="ja">
+
+<head>
+    <title>夜友Radio - ホーム</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/home/index_style.css">
+    <link rel="icon" href="/assets/images/favicon/logo.png" type="image/png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+</head>
+
+<body>
+    <!--ヘッダー-->
+    <div class="header">
+        <svg class="moon" xmlns="http://www.w3.org/2000/svg" width="1049.000000pt" height="1280.000000pt"
+            viewBox="0 0 1049.000000 1280.000000" preserveAspectRatio="xMidYMid meet">
+            <g transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)" fill="#ffffff" stroke="none">
+                <path d="M6015 12789 c-740 -46 -1469 -219 -2145 -509 -284 -121 -817 -407
+                    -985 -528 -22 -15 -108 -77 -191 -136 -179 -126 -366 -275 -521 -412 -163
+                    -144 -375 -344 -398 -375 -11 -15 -63 -74 -115 -131 -1223 -1342 -1815 -3153
+                    -1624 -4968 153 -1459 796 -2809 1835 -3849 665 -665 1429 -1156 2315 -1486
+                    406 -151 865 -268 1304 -330 341 -48 510 -59 900 -59 374 -1 519 8 810 45 85
+                    11 182 23 215 25 33 3 121 19 195 35 707 160 1097 293 1625 554 386 191 672
+                    366 1000 612 261 196 285 223 237 271 -17 17 -43 20 -233 25 -1742 51 -3386
+                    839 -4545 2177 -1184 1368 -1717 3206 -1453 5010 218 1494 969 2854 2124 3849
+                    116 100 115 98 115 132 0 52 -22 59 -186 58 -82 -1 -207 -6 -279 -10z" />
+            </g>
+        </svg>
+        <h1><span>📻</span>夜友Radio</h1>
+
+        <nav>
+            <ul class="list">
+                <li><b>HOME</b>
+                    <span class="list-ja">ホーム</span>
+                </li>
+                <li>
+                    <a class="list-a" href="../program/program.html">PROGRAM
+                        <span class="list-ja">放送予定</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="list-a" href="../letter/letter.html">LETTER
+                        <span class="list-ja">お便り</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <!--配信状況-->
+    <div class="subheader">
+        <div id="information">
+        </div>
+    </div>
+    <!--メインコンテンツ-->
+    <div class="container">
+
+        <!--ラジオ紹介-->
+        <div class="introduction">
+            <div class="title">
+                <div class="title-icon">
+                    <h2>夜友ラジオとは?
+                        <span>RADIO INTRODUCTION</span>
+                    </h2>
+                </div>
+            </div>
+            <div class="title-underline"></div>
+            <div class="introduction-text">
+                <h1><span>🌙📻</span> 夜友Radioについて <span>📻🌙</span></h1>
+                <p><span>🌙</span> 夜友Radioへようこそ <span>🌙</span></p>
+                <p>いつメンでゆるく話して、笑って、楽しい時間を過ごす夜ラジオ。</p>
+                <p>作業のお供に。</p>
+                <p>寝る前のリラックスタイムに。</p>
+                <p>ちょっと誰かと一緒にいたい夜に。</p>
+                <p>雑談メインで、ゆるく楽しく、時々わちゃわちゃしながら配信しています。</p>
+                <p>初見さんも大歓迎！気軽にコメントしてね。</p>
+                <h2><span>🌙📻</span> 放送時間 <span>📻🌙</span></h2>
+                <p>毎週金曜日<br />22:00〜start</p>
+            </div>
+        </div>
+
+        <!--アーカイブ-->
+        <div class="archive">
+            <div class="title">
+                <div class="title-icon">
+                    <h2>最新アーカイブ
+                        <span>ARCHIVE</span>
+                    </h2>
+                </div>
+            </div>
+            <div class="title-underline"></div>
+            <!--YoutubeAPIを使用して最新アーカイブを表示-->
+            <div class="YoutubeArchiveEmbed">
+                <iframe src="https://www.youtube.com/embed/?list=UUMzZhjY522HIzeFaJjGkZ3Q" title="YouTube video player"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen
+                    style="display: flex;align-items: center;justify-self: center; width: 60%; aspect-ratio: 16 / 9;"></iframe>
+            </div>
+        </div>
+
+        <!--パーソナリティ紹介-->
+        <div class="radio-host">
+            <div class="title">
+                <div class="title-icon">
+                    <h2>パーソナリティ紹介
+                        <span>RADIO HOST INTRODUCTION</span>
+                    </h2>
+                </div>
+            </div>
+            <div class="title-underline"></div>
+            <div id="host-list">
+            </div>
+        </div>
+
+        <!--連絡-->
+        <div class="contact">
+            <div class="title">
+                <div class="title-icon">
+                    <h2>連絡先
+                        <span>CONTACT</span>
+                    </h2>
+                </div>
+            </div>
+            <div class="title-underline"></div>
+            <div class="contact-list">
+                <div class="Twitter">
+                    <a href="https://x.com/vrc_NFradio208">
+                        <img src="../assets/images/icons/Twitter-icon.svg" alt="Twitter" />
+                    </a>
+                </div>
+                <div class="Youtube">
+                    <a href="https://www.youtube.com/@夜友Radio">
+                        <img src="../assets/images/icons/yt_logo_fullcolor_white_digital.svg" alt="Youtube" />
+                    </a>
+                </div>
+                <div class="Discord">
+                    <a href="">
+                        <img src="../assets/images/icons/Discord-Symbol-Blurple.svg" alt="Discord" />
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!--フッター-->
+        <div class="footer">
+            <p id="version"></p>
+            <p>このサイトの無断転載を禁じます。</p>
+            <p>不具合があった場合、<b>Web開発: <u><a href="https://x.com/samekoro0321vrc">@samekoro0321vrc</a></u></b>までご連絡ください。</p>
+        </div>
+
+        <!--JavaScript-->
+        <script src="/assets/js/script.js"></script>
+        <script src="/home/index_script.js"></script>
+    </div>
+</body>
+
+</html>

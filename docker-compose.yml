@@ -1,0 +1,21 @@
+services:
+  nginx:
+    image: nginx:alpine
+    ports:
+      - "35500:80"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./frontend/main:/usr/share/nginx/html
+      - ./frontend/voice:/usr/share/nginx/html/voice:ro
+    restart: unless-stopped
+
+  backend:
+    build: ./backend
+    restart: unless-stopped
+    volumes:
+      - ./database:/app/database  # ホストの database を コンテナの /app/database に繋ぐ
+    environment:
+      - DB_PATH=/app/database/yorutomo.db
+      - DISCORD_WEBHOOK_URL=${DISCORD_WEBHOOK_URL}
+    ports:
+      - "35501:8080"

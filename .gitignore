@@ -1,0 +1,15 @@
+# 環境変数
+.env
+
+# データベース
+database/yorutomo.db
+
+# アップロードファイル
+uploads/
+
+# ビルド成果物
+backend/Yorutomo/obj/
+backend/Yorutomo/bin/
+
+# Docker
+.devcontainer/

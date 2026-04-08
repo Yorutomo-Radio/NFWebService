@@ -1,0 +1,51 @@
+{
+    "hosts": [
+        {
+            "name": "すらいむ",
+            "description": "夜友Radioのメインパーソナリティー。<br />ふとした遊び心から始まった疑似ラジオ。その反響を番組誕生の原動力へと変えた、始まりの一人。",
+            "image": "../assets/images/profiles/suraimu",
+            "twitter": "https://x.com/suraimuJ"
+        },
+        {
+            "name": "カンカンキリ",
+            "description": "夜友Radioのメインパーソナリティー。<br />すらいむと共に疑似ラジオの舞台に立ち、番組の基礎を築き上げたもう一人の立役者。",
+            "image": "../assets/images/profiles/kankankiri"
+        },
+        {
+            "name": "Ichinose",
+            "description": "夜友Radioのメインパーソナリティー。<br />夜友Radioの産みの親。彼の何気ない一言と、それに呼応した仲間たちの熱量からこの物語は始まった。",
+            "image": "../assets/images/profiles/Ichinose",
+            "twitter": "https://x.com/Ichinose445206"
+        },
+        {
+            "name": "愛恋柚那",
+            "description": "夜友Radioのメインパーソナリティー。",
+            "image": "../assets/images/profiles/airenyuna",
+            "twitter": "https://x.com/yanderettyan"
+        },
+        {
+            "name": "inoseagrippina",
+            "description": "夜友Radioのメインパーソナリティー。",
+            "image": "../assets/images/profiles/inoseagrippina",
+            "twitter": "https://x.com/inoseagrippina"
+        },
+        {
+            "name": "Twister716",
+            "description": "夜友Radioのメインパーソナリティー。",
+            "image": "../assets/images/profiles/twister716",
+            "twitter": "https://x.com/twister_716"
+        },
+        {
+            "name": "さめころ",
+            "description": "夜友Radioのメインパーソナリティー。",
+            "image": "../assets/images/profiles/samekoro0321",
+            "twitter": "https://x.com/samekoro0321vrc"
+        },
+        {
+            "name": "ななき",
+            "description": "夜友Radioのメインパーソナリティー。",
+            "image": "../assets/images/profiles/nanaki",
+            "twitter": "https://x.com/nanaki1312"
+        }
+    ]
+}

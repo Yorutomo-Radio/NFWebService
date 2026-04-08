@@ -1,0 +1,151 @@
+<html lang="ja">
+
+<head>
+    <title>夜友Radio - お便り</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="letter_style.css">
+    <link rel="icon" href="../assets/images/favicon/logo.png" type="image/png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+</head>
+
+<body>
+    <!--ヘッダー-->
+    <div class="header">
+        <svg class="moon" xmlns="http://www.w3.org/2000/svg" width="1049.000000pt" height="1280.000000pt"
+            viewBox="0 0 1049.000000 1280.000000" preserveAspectRatio="xMidYMid meet">
+            <g transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)" fill="#ffffff" stroke="none">
+                <path d="M6015 12789 c-740 -46 -1469 -219 -2145 -509 -284 -121 -817 -407
+                    -985 -528 -22 -15 -108 -77 -191 -136 -179 -126 -366 -275 -521 -412 -163
+                    -144 -375 -344 -398 -375 -11 -15 -63 -74 -115 -131 -1223 -1342 -1815 -3153
+                    -1624 -4968 153 -1459 796 -2809 1835 -3849 665 -665 1429 -1156 2315 -1486
+                    406 -151 865 -268 1304 -330 341 -48 510 -59 900 -59 374 -1 519 8 810 45 85
+                    11 182 23 215 25 33 3 121 19 195 35 707 160 1097 293 1625 554 386 191 672
+                    366 1000 612 261 196 285 223 237 271 -17 17 -43 20 -233 25 -1742 51 -3386
+                    839 -4545 2177 -1184 1368 -1717 3206 -1453 5010 218 1494 969 2854 2124 3849
+                    116 100 115 98 115 132 0 52 -22 59 -186 58 -82 -1 -207 -6 -279 -10z" />
+            </g>
+        </svg>
+        <h1><span>📻</span>夜友Radio</h1>
+        <nav>
+            <ul class="list">
+                <li>
+                    <a class="list-a" href="../home/index.html">HOME
+                        <span class="list-ja">ホーム</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="list-a" href="../program/program.html">PROGRAM
+                        <span class="list-ja">放送予定</span>
+                    </a>
+                </li>
+                <li><b>LETTER</b>
+                    <span class="list-ja">お便り</span>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <!--配信状況-->
+    <div class="subheader">
+        <div id="information">
+        </div>
+    </div>
+    <!--メインコンテンツ-->
+    <div class="container">
+        <!--アーカイブ-->
+        <div class="send-letter">
+            <div class="title">
+                <div class="title-icon">
+                    <h2>お便り送信
+                        <span>SEND LETTER</span>
+                    </h2>
+                </div>
+            </div>
+            <div class="title-underline"></div>
+
+            <!--お便りフォーム-->
+            <div class="letter-form">
+                <p>
+                    メールアドレスの入力は必要ありません。<br>あなたの声を聞かせてください。
+                </p>
+
+                <div class="note">
+                    <p>
+                        <span>⚠</span> 送信されたお便りは、夜友Radioの番組内で紹介されることがあります。<br />
+                        <b>個人を特定できる情報は含めないでください。また、政治的、暴力的な表現は避けてください。</b>
+                    </p>
+                </div>
+
+                <!--お便りの種類を選択-->
+                <div id="form-type">
+                    <label for="form-type">お便りの種類を選択してください。</label>
+                    <div class="form-type-buttons">
+                        <button type="button" id="type-normal" class="active" onclick="selectLetterType('normal')">🌙
+                            夜風便り</button>
+                        <button type="button" id="type-favorite" onclick="selectLetterType('favorite')">✨
+                            すきって言わせて</button>
+                        <button type="button" id="type-request" onclick="selectLetterType('request')"> 📻 リクエスト</button>
+                        <button type="button" id="type-advice" onclick="selectLetterType('advice')">🌃 夜のお悩み放送局</button>
+                        <button type="button" id="type-vrchat" onclick="selectLetterType('vrchat')">🥽 今夜のVRC通信</button>
+                        <button type="button" id="type-voice" onclick="selectLetterType('voice')">📢 ボイス</button>
+                    </div>
+                    <p class="form-type-example"></p>
+                </div>
+
+                <form id="letter-form" onsubmit="return false;">
+                    <label for="name">ラジオネーム</label>
+                    <input type="text" id="name" name="name" placeholder="空白にすることで匿名で送信することができます">
+
+                    <label for="message">お便り本文</label>
+                    <textarea id="message" name="message" rows="8" placeholder="夜友Radioに送るお便りを入力してください。"
+                        required></textarea>
+
+                    <button type="button" onclick="checkSendLetter()">この内容で送信する</button>
+                </form>
+            </div>
+
+            <!--dialog-->
+            <dialog id="check-send-letter">
+                <div class="title">
+                    <div class="title-icon">
+                        <h2>言葉を封筒に入れる前に
+                            <span>BEFORE PUTTING IT IN THE ENVELOPE</span>
+                        </h2>
+                    </div>
+                </div>
+                <div class="title-underline"></div>
+                <div class="note">
+                    <p>
+                        <span>⚠</span> 送信されたお便りは、夜友Radioの番組内で紹介されることがあります。<br />
+                        <b>個人を特定できる情報は含めないでください。また、政治的、暴力的な表現は避けてください。</b>
+                    </p>
+                    <p>また、このお便りを送信すると<b>今後編集はできなくなり、1時間の間は再度送信できなくなります。</b><br />
+                        お間違いのないよう、ご注意ください。</p>
+                </div>
+
+                <div class="dialog-content">
+                    <p id="dialog-type"></p>
+                    <p id="dialog-name"></p>
+                    <p id="dialog-message"></p>
+                </div>
+                <div class="dialog-buttons">
+                    <button id="close-dialog" onclick="this.closest('dialog').close(); resetSubmitBtn();">書き直す</button>
+                    <button id="real-submit" onclick="submitLetter()">封筒を出す</button>
+                </div>
+            </dialog>
+        </div>
+
+        <!--フッター-->
+        <div class="footer">
+            <p id="version"></p>
+            <p>このサイトの無断転載を禁じます。</p>
+            <p>不具合があった場合、<b>Web開発: <u><a href="https://x.com/samekoro0321vrc">@samekoro0321vrc</a></u></b>までご連絡ください。</p>
+        </div>
+
+        <script src="../assets/js/script.js"></script>
+        <script src="letter_script.js"></script>
+    </div>
+</body>
+
+</html>

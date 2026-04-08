@@ -1,0 +1,240 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: linear-gradient(-15deg, #000000 0%, #000e1f 100%) no-repeat fixed;
+    color: #E0E0E0;
+    font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    background: linear-gradient(to bottom,
+            #050516 0%,
+            rgba(5, 5, 22, 0.8) 70%,
+            transparent 100%);
+    padding: 20px 5%;
+    color: #B0B0C0;
+    letter-spacing: 0.15rem;
+    z-index: 100;
+}
+
+.moon {
+    margin-top: 3vh;
+    width: 80px;
+    height: 80px;
+    left: 6rem;
+    border-radius: 50%;
+    rotate: 250deg;
+    position: absolute;
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.4));
+    z-index: 50;
+    animation: first-movemoon 1.5s ease-out;
+}
+
+@keyframes first-movemoon {
+    0% {
+        transform: translate(250px, -250px);
+    }
+}
+
+.header h1 {
+    margin: 20px 0 0;
+    font-size: 200%;
+    font-weight: normal;
+    color: #FFFFFF;
+    text-shadow: 0 0 15px #FFFFFF;
+    z-index: 100;
+    mix-blend-mode: difference;
+}
+
+.header h1 span {
+    filter: drop-shadow(0 0 5px rgba(255, 165, 0, 0.7));
+}
+
+.list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 20px;
+    position: relative;
+    font-size: 0.8rem;
+    letter-spacing: 0.2rem;
+}
+
+.list-ja {
+    display: block;
+    font-size: 0.75rem;
+    position: relative;
+    text-align: center;
+}
+
+.list li {
+    font-size: 120%;
+    cursor: not-allowed;
+}
+
+.list-a {
+    display: inline-block;
+    color: #B0B0C0;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.list-a:hover {
+    color: #FFFFFF;
+    transform: translateY(-2px);
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+}
+
+.subheader {
+    padding: 10px 5%;
+}
+
+.subheader p {
+    margin-top: 0;
+}
+
+#information {
+    display: flex;
+    color: #FF4B2B;
+    font-size: 2.5vh;
+    font-weight: bold;
+    margin-right: 10px;
+    margin-bottom: 0;
+    animation: onair-blink 1.5s infinite;
+}
+
+#information a {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    text-decoration: none;
+    color: inherit;
+}
+
+#information a:hover {
+    opacity: 0.8;
+}
+
+#live-info {
+    margin-left: auto;
+    white-space: nowrap;
+}
+
+
+@keyframes onair-blink {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.3;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+#live-info {
+    right: 0;
+    text-align: center;
+    margin-left: auto;
+}
+
+.title-icon {
+    margin-left: 10px;
+    display: flex;
+    gap: 4px;
+}
+
+.title-icon p {
+    width: 6px;
+    height: 45px;
+    background-color: #B6B6B6;
+    border-radius: 4px;
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.9));
+    animation: icon-wave 1.2s linear infinite alternate;
+}
+
+.title-icon .icon-1 {
+    animation-delay: -0.2s;
+}
+
+.title-icon .icon-2 {
+    animation-delay: -0.8s;
+}
+
+.title-icon .icon-3 {
+    animation-delay: -1.0s;
+}
+
+.title-icon .icon-4 {
+    animation-delay: -0.4s;
+}
+
+@keyframes icon-wave {
+    0% {
+        transform: scaleY(0.3);
+    }
+
+    50% {
+        transform: scaleY(1);
+    }
+
+    100% {
+        transform: scaleY(0.5);
+    }
+}
+
+.title {
+    margin-top: 20px;
+}
+
+.title h2 {
+    margin-top: 0;
+    font-size: 3vh;
+}
+
+.title span {
+    display: block;
+    font-size: 0.6em;
+    color: #666666;
+    letter-spacing: 0.2rem;
+    margin-left: 5px;
+}
+
+.title-underline {
+    background: #38385F;
+    width: 100%;
+    height: 0.4vh;
+    border-radius: 75%;
+    margin-bottom: 20px;
+}
+
+.footer {
+    padding: 50px;
+    background: linear-gradient(45deg, #111120 0%, #060625 100%) no-repeat fixed;
+    color: #B0B0C0;
+}
+
+.footer a {
+    color: #B0B0C0;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.footer a:hover {
+    color: #FFFFFF;
+    transform: translateY(-2px);
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+}

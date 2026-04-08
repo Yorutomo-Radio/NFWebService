@@ -1,0 +1,93 @@
+.program-item {
+    background: #051721;
+    border-radius: 20px;
+    margin: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    align-items: center;
+}
+
+.program-date {
+    background: #000000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 30px 10px 20px;
+    clip-path: polygon(0% 0%, 100% 0%, 75% 100%, 0% 100%);
+    z-index: 2;
+    min-width: 100px;
+    height: 250px;
+    font-size: 1.4rem;
+}
+
+.program-day {
+    margin: 0;
+}
+
+.program-time {
+    margin: 0 0 10px 0;
+}
+
+.program-image {
+    height: 250px;
+    margin-left: -40px;
+    z-index: 1;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.program-text {
+    flex: 1;
+    min-width: 250px;
+    padding: 15px 20px;
+    font-size: 1.3rem;
+}
+
+.program-host {
+    color: gray;
+    font-size: 0.95rem;
+}
+
+@media (max-width: 800px) {
+    .program-item {
+        justify-content: flex-start;
+    }
+
+    .program-text {
+        flex: 0 0 100%;
+        order: 3;
+        margin-left: 0;
+        padding-top: 5px;
+    }
+
+    .program-date {
+        width: 150px;
+    }
+
+    .program-image {
+        justify-content: space-between;
+        width: 65%;
+    }
+}
+
+@media (max-width: 500px) {
+    .program-date {
+        flex: 0 0 100px;
+    }
+
+    .program-image {
+        margin-left: -40px;
+        width: 70%;
+    }
+}
+
+/* 曜日 */
+.Sat {
+    color: #1e90ff;
+}
+
+.Sun {
+    color: #b22222
+}
