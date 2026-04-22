@@ -2,7 +2,7 @@
 .env
 
 # データベース
-database/yorutomo.db
+database/
 
 # アップロードファイル
 uploads/
