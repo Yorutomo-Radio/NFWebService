@@ -14,12 +14,12 @@ builder.Services.AddCors(options =>
     options.AddDefaultPolicy(policy =>
     {
         policy.WithOrigins(
-            "https://yorutomo-radio.com",
-            "http://100.98.216.74:35500",
-            "http://localhost:35500"
-        )
-        .WithMethods("GET", "POST")
-        .WithHeaders("Content-Type");
+                "https://yorutomo-radio.com",
+                "http://100.98.216.74:35500",
+                "http://localhost:35500"
+            )
+            .WithMethods("GET", "POST")
+            .WithHeaders("Content-Type");
     });
 });
 
@@ -118,15 +118,15 @@ static void InsertLetter(string name, string type, string message)
     insertCmd.Parameters.AddWithValue("$message", message);
     insertCmd.Parameters.AddWithValue("$createdAt",
         TimeZoneInfo.ConvertTime(DateTime.Now,
-            TimeZoneInfo.FindSystemTimeZoneById("Asia/Tokyo"))
-        .ToString("yyyy-MM-dd HH:mm:ss"));
+                TimeZoneInfo.FindSystemTimeZoneById("Asia/Tokyo"))
+            .ToString("yyyy-MM-dd HH:mm:ss"));
     insertCmd.ExecuteNonQuery();
 }
 
 static async Task sendDiscordWebhook(string name, string type, string message)
 {
     string WebhookUrl = "";
-    
+
     if (!isDebug)
     {
         // 本番環境のWebhook URL
@@ -151,10 +151,10 @@ static async Task sendDiscordWebhook(string name, string type, string message)
     using var client = new DiscordWebhookClient(webhookId, webhookToken);
 
     var embed = new EmbedBuilder()
-    .WithTitle($"ラジオネーム: {name} さん")
-    .WithDescription($"種類: {type} \n 内容: {message}")
-    .WithColor(new Color(5814783))
-    .Build();
+        .WithTitle($"ラジオネーム: {name} さん")
+        .WithDescription($"種類: {type} \n 内容: {message}")
+        .WithColor(new Color(5814783))
+        .Build();
 
     await client.SendMessageAsync(
         text: "📩 **新しいお便りが届きました！**",
@@ -166,5 +166,3 @@ app.Run();
 
 // お便り受信APIのリクエストモデル
 record LetterRequest(string Name, string Type, string Message);
-
-
