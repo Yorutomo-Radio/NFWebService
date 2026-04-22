@@ -164,13 +164,16 @@ CORS の許可オリジン: `https://yorutomo-radio.com` / `http://localhost:355
 
 ```json
 {
-  "programs": [
-    {
-      "title": "夜友Radio #1",
-      "date": "2026-04-25",
-      "time": "22:00"
-    }
-  ]
+    "programs": [
+        {
+            "id": 4, // ID
+            "date": "04/22", // 日付
+            "time": "22:00", // 時間
+            "title": "夜友ラジオ β版 第1回", // タイトル
+            "description": "夜友ラジオが遂に始動準備へ、初のOBT第1回目", // 説明欄
+            "host": "<未定>" // ホスト(パーソナリティー)
+        }
+    ]
 }
 ```
 
@@ -184,12 +187,15 @@ CORS の許可オリジン: `https://yorutomo-radio.com` / `http://localhost:355
 
 ```json
 {
-  "hosts": [
-    {
-      "name": "パーソナリティー名",
-      "description": "紹介文"
-    }
-  ]
+    "hosts": [
+        {
+            "name": "めだころ", // 名前
+            "description": "夜友ラジオのメインパーソナリティー。ここに説明が来る", // 説明
+            "image": "../assets/images/profiles/medakoro", // フロント側の画像パス
+            "twitter": "https://x.com/medakoro0321" // TwitterURL
+        },
+        // 略...
+    ]
 }
 ```
 
@@ -203,9 +209,12 @@ CORS の許可オリジン: `https://yorutomo-radio.com` / `http://localhost:355
 
 ```json
 {
-  "isLive": true,
-  "title": "夜友Radio #1"
+    "islive": false, // ライブ中か? 外部GUIソフトから操作可能
+    "title": "夜友ラジオ β版 第1回", // タイトル
+    "start": "2026-04-17T22:00:00", // 開始時刻
+    "url": "" // 配信URL
 }
+
 ```
 
 ---
@@ -226,11 +235,22 @@ CORS の許可オリジン: `https://yorutomo-radio.com` / `http://localhost:355
 
 ```json
 {
-  "Name": "リスナーA",
-  "Type": "リクエスト",
-  "Message": "〇〇をかけてください！"
+  "name": "めだころ", // 名前
+  "type": "request", // お便りの種類、種類は以下の通り
+  "message": "次のラジオでこの音楽を流してほしいです!" // 本文
 }
 ```
+
+**お便りの種類**
+
+| タイプ(ID) | クライアント側 | 説明 |
+|---|---|---|
+| `normal` | 夜風便り | 一般的なお便り種別 |
+| `favorite` | すきって言わせて | ハマっているものや推し |
+| `request` | リクエスト | (省略) |
+| `advice` | 夜のお悩み放送局 | 相談やモヤモヤ等 |
+| `vrchat` | 今週のVRC通信 | VRChat上での話 |
+| `voice` | ボイス | シチュボ依頼 |
 
 **レスポンス例**
 
@@ -257,4 +277,4 @@ CORS の許可オリジン: `https://yorutomo-radio.com` / `http://localhost:355
 | `created_at` | TEXT | 受信日時 (JST, `yyyy-MM-dd HH:mm:ss`) |
 
 > [!NOTE]
-> このドキュメントはCLaudeによる自動生成です
+> このドキュメントはClaudeによる自動生成です
