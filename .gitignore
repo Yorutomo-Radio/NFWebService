@@ -10,6 +10,10 @@ uploads/
 # ビルド成果物
 backend/Yorutomo/obj/
 backend/Yorutomo/bin/
+bot/NightFriendsBot/obj/
+
+# Package
+bot/NightFriendsBot/packages
 
 # Docker
 .devcontainer/
